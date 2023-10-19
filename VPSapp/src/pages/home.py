@@ -19,7 +19,7 @@ home = pd.DataFrame([quarter, big_cls, big_count]).T
 home.columns = ['quarter', 'big_cls', 'count']
 
 layout_home = html.Div([
-dbc.Container([html.Br(), html.Br(), html.Br(), html.Br()],),
+dbc.Container([html.Br(), html.Br(), html.Br(), html.Br()],fluid=True),
 
     dbc.Container([
         dbc.Row(
@@ -41,7 +41,7 @@ dbc.Container([html.Br(), html.Br(), html.Br(), html.Br()],),
                  style={"padding-left":10, "padding-right":10, "padding-bottom":10, "padding-top":2, "marginTop":"1px"},
                  md=6),
          ], style={"height":"500px","padding-left":1, "padding-right":10, "padding-bottom":10, "padding-top":10, "margin-left":1})
-    ],),
+    ],fluid=True),
 ],)
 
 @callback(Output('home-donut', 'figure'), Input('home-slider', 'value'))
