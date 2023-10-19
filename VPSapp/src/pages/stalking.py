@@ -45,7 +45,7 @@ laws_ext = pd.read_json('assets/law_stalking.json')
 laws = pd.concat([laws, laws_ext], axis=1)
 
 layout_stalk = html.Div([
-    dbc.Container([html.Br(), html.Br(), html.Br(), html.Br()],),
+    dbc.Container([html.Br(), html.Br(), html.Br(), html.Br()],fluid=True),
 
     dbc.Container([
         dbc.Row(
@@ -61,7 +61,7 @@ layout_stalk = html.Div([
                       html.A(dbc.Row(id='stalking_law', style={'height':'40%'}))], md=5),
              ], style={"padding": 10})
 
-    ], ),
+    ], fluid=True),
 ],)
 
 @callback(Output('histogram', 'figure'), Input('slider-1', 'value'))
