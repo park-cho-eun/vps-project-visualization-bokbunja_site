@@ -30,7 +30,7 @@ nurse = nurse.drop(drop_idx)
 
 
 layout_nurse = html.Div([
-dbc.Container([html.Br(), html.Br(), html.Br(), html.Br()],),
+dbc.Container([html.Br(), html.Br(), html.Br(), html.Br()],fluid=True),
 
     dbc.Container([
         dbc.Row(
@@ -52,7 +52,7 @@ dbc.Container([html.Br(), html.Br(), html.Br(), html.Br()],),
                  style={"padding-left":10, "padding-right":10, "padding-bottom":10, "padding-top":2, "margin-top":"5px"},
                  md=6),
          ], style={"height":"500px","padding-left":1, "padding-right":10, "padding-bottom":10, "padding-top":10, "margin-left":1})
-    ],),
+    ],fluid=True),
 ],)
 
 @callback(Output('nurse-donut', 'figure'), Input('nurse-slider', 'value'))
