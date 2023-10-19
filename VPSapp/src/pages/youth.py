@@ -9,9 +9,9 @@ import plotly.express as px
 
 
 #청년정책 데이터 불러오기
-youth_n = pd.read_excel('C:\\Users\\clstm_\\OneDrive\\Desktop\\youth_vis\\청년정책_연도별_대분류_기사개수.xlsx')
-youth_n_det = pd.read_excel('C:\\Users\\clstm_\\OneDrive\\Desktop\\youth_vis\\청년정책_연도별_소분류_기사개수.xlsx')
-youth_cores = pd.read_json('C:\\Users\\clstm_\\OneDrive\\Desktop\\youth_vis\\청년정책_연도별_대분류별_핵심기사요약.json')
+youth_n = pd.read_excel('assets/청년정책_연도별_대분류_기사개수.xlsx')
+youth_n_det = pd.read_excel('assets/청년정책_연도별_소분류_기사개수.xlsx')
+youth_cores = pd.read_json('assets/청년정책_연도별_대분류별_핵심기사요약.json')
 youth_n.columns = ['num', 'year', 'big_cls', 'count']
 youth_n_det.columns = ['num', 'year', 'small_cls', 'count']
 
