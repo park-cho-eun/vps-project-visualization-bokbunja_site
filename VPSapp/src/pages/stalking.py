@@ -41,7 +41,7 @@ laws['details_name'] = ['처벌수위', '경찰 대응', '후속조치/피해자
                         '처벌수위', '경찰 대응', '후속조치/피해자보호', '기타',
                         '처벌수위', '경찰 대응', '후속조치/피해자보호', '기타']
 
-laws_ext = pd.read_excel('assets/law_stalking.xlsx')
+laws_ext = pd.read_json('assets/law_stalking.json')
 laws = pd.concat([laws, laws_ext], axis=1)
 
 layout_stalk = html.Div([
