@@ -9,10 +9,10 @@ import plotly.graph_objects as go
 import plotly.express as px
 
 #스토킹 데이터 불러오기
-xy = pd.read_json('C:\\Users\\clstm_\\OneDrive\\Desktop\\final_vis.json')
+xy = pd.read_json('assets/final_vis.json')
 xy['size'] = [208, 119, 61, 220, 110, 28, 277, 128, 18, 210, 120, 7]
-label_2 = pd.read_json('C:\\Users\\clstm_\\OneDrive\\Desktop\\semifinal_news_2.json') #세부 클러스터링
-label = pd.read_json('C:\\Users\\clstm_\\OneDrive\\Desktop\\semifinal_news_3.json') #대분류 클러스터
+label_2 = pd.read_json('assets/semifinal_news_2.json') #세부 클러스터링
+label = pd.read_json('assets/semifinal_news_3.json') #대분류 클러스터
 
 label_2 = label_2[['sliced', '2dim', '작성일', 'quarter', 'label', 'details']]
 label_2['label'] = [2]*label_2.shape[0]
@@ -41,7 +41,7 @@ laws['details_name'] = ['처벌수위', '경찰 대응', '후속조치/피해자
                         '처벌수위', '경찰 대응', '후속조치/피해자보호', '기타',
                         '처벌수위', '경찰 대응', '후속조치/피해자보호', '기타']
 
-laws_ext = pd.read_excel('C:\\Users\\clstm_\\OneDrive\\Desktop\\law_stalking.xlsx')
+laws_ext = pd.read_excel('assets/law_stalking.xlsx')
 laws = pd.concat([laws, laws_ext], axis=1)
 
 layout_stalk = html.Div([
