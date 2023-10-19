@@ -8,7 +8,7 @@ import plotly.graph_objects as go
 import plotly.express as px
 from matplotlib.colors import LinearSegmentedColormap
 
-nurse = pd.read_excel('assets/간호법_연도별_대분류_기사개수.xlsx')
+nurse = pd.read_json('assets/간호법_연도별_대분류_기사개수.json')
 nurse = nurse[['year', 'big_cls', 'count']]
 
 nurse['x'] = [-2, -1.6, 0.4, 0.5, 1.8,
