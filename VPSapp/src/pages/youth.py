@@ -42,7 +42,7 @@ cards = dbc.Card(
 )
 
 layout_youth = html.Div([
-dbc.Container([html.Br(), html.Br(), html.Br(), html.Br()],),
+dbc.Container([html.Br(), html.Br(), html.Br(), html.Br()],fluid=True),
 
     dbc.Container([
         html.A([dbc.Container([dbc.Row(
@@ -63,7 +63,7 @@ dbc.Container([html.Br(), html.Br(), html.Br(), html.Br()],),
                  md=6),
          ], style={"padding":10})],
     )], id='youth',)
-    ],),
+    ],fluid=True),
 
 ],)
 
